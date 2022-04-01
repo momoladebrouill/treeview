@@ -54,7 +54,7 @@ def random_tree(typ=Node):
     t=Tree(typ)
     nodes=[t.root]
     namegenerator= lambda n:''.join(chr(randrange(65,90)) for i in range(n))
-    for i in range(10):
+    for i in range(randrange(1,10)*5):
         n=typ(namegenerator(2))
         choice(nodes).add(n)
         nodes.append(n)
